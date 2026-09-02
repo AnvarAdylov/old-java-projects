@@ -1,0 +1,12 @@
+Something was written here 
+but it is too late
+Yay!￿Token: SomethingDocname:Trial.txt Line:1 Col:1
+Token: wasDocname:Trial.txt Line:1 Col:11
+Token: writtenDocname:Trial.txt Line:1 Col:15
+Token: hereDocname:Trial.txt Line:1 Col:23
+Token: butDocname:Trial.txt Line:2 Col:1
+Token: itDocname:Trial.txt Line:2 Col:5
+Token: isDocname:Trial.txt Line:2 Col:8
+Token: tooDocname:Trial.txt Line:2 Col:11
+Token: lateDocname:Trial.txt Line:2 Col:15
+Token: Yay!￿Docname:Trial.txt Line:3 Col:1

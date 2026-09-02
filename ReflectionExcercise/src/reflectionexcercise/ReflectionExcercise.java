@@ -1,0 +1,67 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package reflectionexcercise;
+
+import java.lang.reflect.Field;
+import java.lang.reflect.Method;
+import java.util.Scanner;
+
+
+/**
+ *
+ * @author Anvar Adylov, Almas Askarov
+ */
+public class ReflectionExcercise {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        try {/* 
+           Person p = new Person(); 
+            Class genericClass = p.getClass();
+            System.out.println(genericClass.getName());
+            System.out.println(genericClass);
+            String cn = "java.lang.Exception";
+            Class bclass = Class.forName(cn).getClass();
+            System.out.println(bclass);
+           */
+        System.out.println("Welcome user! \nWrite down the name of the class you want to know:");
+        Scanner sc = new Scanner (System.in);
+        String className = sc.next();
+        // This part should be changed depending on where class located
+        //String cn = "java.lang.Exception";
+        String cn = "reflectionexcercise.";
+        //
+        String useN = cn + className;
+        Class genericClass = Class.forName(cn + className);
+        System.out.println(genericClass.getName());
+        System.out.println(genericClass);
+        Field[] field = genericClass.getDeclaredFields();
+        for (Field fieldelement : field) { 
+        Class fieldType = fieldelement.getType(); 
+        System.out.println("Name: " + fieldelement.getName()); 
+        System.out.println("Type: " + fieldType.getName()); 
+        } 
+        Method[] methods = genericClass.getMethods(); 
+        for (Method method : methods) { 
+        System.out.println("Method name: " + method.getName()); 
+        System.out.println("Return types: " + method.getReturnType().getName()); 
+ 
+        Class[] paramTypes = method.getParameterTypes(); 
+        System.out.print("Parameters: "); 
+        for (Class paramType : paramTypes) { 
+            System.out.print(" " + paramType.getName()); 
+        } 
+        System.out.println(); 
+} 
+        } catch (Exception e) {
+            System.out.println("Internal error occured :(");
+        }
+        
+    }
+    
+}

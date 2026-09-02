@@ -1,0 +1,16 @@
+To reiterate, we have seen the following constructor and methods for creating and removing documents and directories:
+
+    new File(String filename)  — Used to create a new File object (document or directory) with the given name, which may or may not exist on the computer
+    new File(File dir, String filename)  — Used to create a new File object (document or directory) with the given name, within the given directory dir.  This new File may or may not exist on the computer
+    boolean exists() — Used to see if the given document or directory is actually on your computer
+    boolean createNewFile() — Creates a new document on your computer that is represented by the given File object
+    boolean mkdir()— Creates a new directory on your computer that is represented by the given File object
+    boolean delete() — Removes the document or directory represented by the File object from your computer
+
+In addition, we also have the following that are used to access information and navigate through file structures on our computers:
+
+    String getName() — Returns the basic name of the document or directory
+    String getPath() — Returns the path of the document or directory, generally rooted from the current directory (in our case, the root directory is the project directory)
+    boolean isFile() — Returns true if and only if the given File is a document (not a directory).  This Java method is very poorly named!
+    boolean isDirectory() — Returns true if and only if the given File is a directory (not a document)
+    File[] listFiles() — Returns an array of File objects which represent the documents and directories that are contained within the given directory.  (The File object on which you call this should represent an actual directory.)
