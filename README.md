@@ -35,6 +35,6 @@ Open the folder in NetBeans, or compile from the command line:
 
 ```bash
 cd BankProject/src
-javac */*.java
-java <package>.TestBank
+javac Bank_Package/*.java
+java Bank_Package.TestBank
 ```
